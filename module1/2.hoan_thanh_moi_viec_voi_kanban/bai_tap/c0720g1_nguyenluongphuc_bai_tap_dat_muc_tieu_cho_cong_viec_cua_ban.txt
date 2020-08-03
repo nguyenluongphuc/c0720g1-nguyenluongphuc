@@ -1,0 +1,24 @@
+Bài luyện tập 1&2: Hãy phân tích ngắn gọn và đánh giá từng mục tiêu sau đây dựa theo tiêu chuẩn SMART.
+
+////Tăng năng suất làm việc 5% vào tuần tới
+*Đánh giá theo tiêu chí SMART rubric : 16 điểm
+*Chỉnh sửa mục tiêu : Tăng năng suất làm việc của bản thân tại công ty lên hơn 5% so với tuần này, tiến độ hoàn thành vào cuối tuần tới
+////Tặng cho vợ một chiếc máy tính mới nếu trúng xổ số
+*Đánh giá theo tiêu chí SMART rubric : 9 điểm
+*Chỉnh sửa mục tiêu : Mua tặng vợ laptop Dell, tầm giá 12 triệu đồng, bằng cách tiết kiệm tiền lương tháng tới
+////Tiết kiệm đủ tiền để mua một chiếc máy tính mới
+*Đánh giá theo tiêu chí SMART rubric : 13 điểm
+*Chỉnh sửa mục tiêu : Cắt giảm chi tiêu không cần thiết trong tháng tiếp theo, để tiết kiệm tiền mua laptop mới tầm giá 15 triệu, phục vụ công việc tốt hơn.
+////Tuần tới sẽ dọn dẹp lại khu vườn
+*Đánh giá theo tiêu chí SMART rubric : 16 điểm
+*Chỉnh sửa mục tiêu : Dành 2 ngày cuối tuần tới để dọn dẹp sạch sẽ vườn nhà
+////Tự thành lập một công ty của riêng mình
+*Đánh giá theo tiêu chí SMART rubric : 10 điểm
+*Chỉnh sửa mục tiêu : Chuẩn bị vốn từ 100-300 triệu, trong vong 3 năm để thành lập công ty riêng vốn điều lệ tối thiểu 100 triệu.
+
+Bài luyện tập 3. Hãy đặt cho mình từ 5 đến 10 mục tiêu dựa cho công việc hiện tại của bạn.
+//hoàn thành tất cả bài tập kanban trong 1 ngày (19 điểm)
+//hoàn thành khóa học codegym đúng hạn trong 6 tháng (19 điểm)
+//tìm được công việc trong một công ty lập trình sau khi tốt nghiệp vào đầu năm 2021 (19 điểm )
+//bắt đầu khởi động dự án riêng từ quý 2 năm 2021 (16 điểm )
+//mua một căn hộ chung cư vào năm 2022 (16 điểm)
