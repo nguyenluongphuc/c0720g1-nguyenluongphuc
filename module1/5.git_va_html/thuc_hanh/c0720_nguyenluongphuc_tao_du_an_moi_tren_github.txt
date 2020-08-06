@@ -1,0 +1,13 @@
+các câu lệnh vừa sử dụng :
+
+1. git init : là để khởi tạo 1 Repository mới
+
+2. git remote add origin<space>link của remote repo vừa tạo trên github : để kết nối giữa local repository trên máy và remote repository trên github
+
+3. git add README.md : là để đưa file README.md (file text giới thiệu về repo vừa tạo) vào chỉ mục của git
+
+4. git commit -m"Add README.md file" : để lưu lại các thay đổi ở local repo, bên trong dấu "là 1 messsage tùy mình để đánh dấu cho sự thay đổi"
+
+5. git push origin master : là câu lệnh để quyết định đẩy các thay đổi ở local lên remote.
+
+link repository tạo được : github.com/nguyenluongphuc/thuc-hanh-tao-du-an-moi-tren-git-hub

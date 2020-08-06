@@ -1,0 +1,18 @@
+clone là hành động nhân bản và đưa phiên bản nhân bản được đó 
+về một thư mục đích trên máy tính cá nhân của lập trình viên ( người muốn cập nhật phiên bản đó trên máy của mình )
+
+trình tự thực hiện :
+
+1. lên trang github.com, 
+và đi đến repository mình muốn clone, 
+chọn thẻ màu xanh lá cây có tên code/clone or download , 
+và copy đường link từ thẻ này
+
+2. đi đến thư mục đích mà mình muốn lưu trữ phiên bản cập nhật
+
+3. kích chuột phải vào chỗ bất kì trên nền thư mục đích, chon git bash
+
+4. 1 cửa sổ git sẽ hiện ra, chúng ta gõ câu lệnh có cú pháp : 
+git<space>clone<space>link copy được ở bước 1. 
+rồi enter. 
+toàn bộ dữ liệu ở repository đó sẽ được đưa về thư mục đích trên máy của mình.
