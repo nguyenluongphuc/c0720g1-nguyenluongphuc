@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<title>Bài tập tạo form đơn giản</title>
+</head>
+<body>
+	<form method="get" action="URL">
+		<fieldset>
+			<legend><h2><span style="color: orange">SỞ THÍCH CỦA BẠN</span></h2></legend>
+			<label for="fullName"><span style="color: blue">Họ và tên</span></label>
+				<input id="fullName" type="text" name="yourName" value=""/><br><br>
+			<label for="mail"><span style="color: blue">Email</span></label>
+				<input id="mail" type="text" name="email" value=""/><br><br>
+			<label><span style="color: blue">Sở thích :</span></label><br><br>
+				<input type="checkbox" name="hobby" value="theThao"/><span style="color: orange">Thể thao</span>
+				<input type="checkbox" name="hobby" value="amNhac"/><span style="color: orange">Âm nhạc</span>
+				<input type="checkbox" name="hobby" value="docsach"/><span style="color: orange">Đọc sách</span><br/>
+				<input type="checkbox" name="hobby" value="luotWeb"/><span style="color: orange">Lướt web</span>
+				<input type="checkbox" name="hobby" value="choiGame"/><span style="color: orange">Chơi game</span>
+				<input type="checkbox" name="hobby" value="dienAnh"/><span style="color: orange">Điện ảnh</span><br/>
+				<input type="checkbox" name="hobby" value="duLich"/><span style="color: orange">Du lịch</span><br/><br>
+				<input type="submit" value="Gửi thông tin"/>
+				<input type="reset" value="Nhập lại"/>
+		</fieldset>
+	</form>
+</body>
+</html>

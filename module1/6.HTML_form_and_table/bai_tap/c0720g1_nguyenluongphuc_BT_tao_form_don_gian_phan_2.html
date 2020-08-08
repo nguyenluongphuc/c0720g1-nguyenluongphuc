@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<title>Tạo form đơn giản phần 2</title>
+</head>
+<body>
+	<form method="get" action="URL">
+		<fieldset>
+			<legend><h2><span style="color: blue">ĐĂNG KÝ HỌC VIÊN</span></h2></legend>
+			<label for="fullName"><span style="color: blue">Họ và tên</span></label>
+				<input id="fullName" type="text" name="yourname" value="vd:Nguyễn Văn A"/><br/><br/>
+			<label for="sinhNhat"><span style="color: blue">Ngày sinh</span></label>
+				<input id="sinhNhat" type="text" name="dateofbirth" value="dd/mm/yyyy"/><br/><br/>
+			<label><span style="color: blue">Giới tính :</span></label>
+				<input id="abc" type="radio" name="gioiTinh" value="nam"/><label for="abc">Nam</lable>
+				<input id="bcd" type="radio" name="gioiTinh" value="nu"/><label for="bcd">Nữ</label><br/><br/>
+			<label for="aaa"><span style="color: blue">Địa chỉ</span></label>
+				<textarea id="aaa" name="adress" value="" cols="50" rows="4"></textarea><br/><br/>
+			<label for="bbb"><span style="color: blue">Lớp</span></label>
+				<select id="bbb" type="drop-down" name="yourClass" value="-Chọn lớp-"/>
+					<option value="lop1">Lớp 1</option>
+					<option value="lop2">Lớp 2</option>
+				</select><br/><br/>
+			<label for="ccc"><span style="color: blue">Email</span></label>
+				<input id="ccc" type="text" name="email" value=""/><br/><br/>
+			<label for="ddd"><span style="color: blue">Điện thoại</span>
+				<input id="ddd" type="text" name="phoneNumber" value=""/><br/><br/>
+			<input type="submit" value="Đăng ký"/>
+			<input type="reset" value="Nhập lại"/>
+		</fieldset>
+	</form>
+</body>
+</html>
