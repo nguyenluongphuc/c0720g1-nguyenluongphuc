@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <form>
+        <label>Amount<br>
+            <input id="soTien" type="number"/></label><br><br>
+        <label>From Currency<br>
+            <select id="fromCurrency" name="fromcurrency">
+                <option value="VietNamDong">VietNam</option>
+                <option value="USD">USD</option>
+            </select>
+        </label><br><br>
+        <label>To Currency<br>
+            <select id="toCurrency" name="tocurrency">
+                <option value="USD">USD</option>
+                <option value="VietNamDong">VietNam</option>
+            </select>
+        </label><br><br>
+        <button onclick="chuyenDoi()" type="button" name="button">Convert</button><br><br>
+        <label id="ketQua"></label>
+    </form>
+    <script>
+        function chuyenDoi() {
+            let nhapTien = parseFloat(document.getElementById("soTien").value);
+            let doiTu = document.getElementById("fromCurrency").value;
+            let doiRa = document.getElementById("toCurrency").value;
+            if ( doiTu == "VietNamDong" && doiRa == "USD") {
+                document.getElementById("ketQua").innerHTML = "Result :" + (nhapTien/23000) + "USD";
+            }
+            else if ( doiTu == "USD" && doiRa == "VietNamDong") {
+                document.getElementById("ketQua").innerHTML = "Result :" + (nhapTien*23000) + "VND";
+            }
+            else {
+                document.getElementById("ketQua").innerHTML = "Có lẽ bạn đã nhầm lẫn, hãy chọn lại đơn vị tiền tệ muốn quy đổi !";
+            }
+        }
+    </script>
+</body>
+</html>

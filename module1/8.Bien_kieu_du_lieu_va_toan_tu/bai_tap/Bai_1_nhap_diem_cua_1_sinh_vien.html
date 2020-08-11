@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập điểm của một sinh viên</title>
+</head>
+<body>
+    <script>
+        let inputLy = prompt('Nhập điểm môn vật lý');
+        let inputHoa = prompt('Nhập điểm môn hóa');
+        let inputSinh = prompt('Nhập điểm môn sinh học');
+        let diemLy = parseFloat(inputLy);
+        let diemHoa = parseFloat(inputHoa);
+        let diemSinh = parseFloat(inputSinh);
+        let diemTrungBinh = ( diemLy + diemHoa + diemSinh ) / 3;
+        let tongDiem = diemLy + diemSinh + diemHoa;
+        document.write("Điểm trung bình ba môn là :" + diemTrungBinh );
+        document.write("<br>");
+        document.write("Tổng điểm ba môn là :" + tongDiem );
+    </script>
+</body>
+</html>
