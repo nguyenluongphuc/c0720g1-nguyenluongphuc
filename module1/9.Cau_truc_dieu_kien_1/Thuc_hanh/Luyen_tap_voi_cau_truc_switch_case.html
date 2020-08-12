@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc switch...case</title>
+</head>
+<body>
+    <script>
+        //Bài 1:
+        // let browser = prompt("Which browser you want ?");
+        // switch (browser) {
+        //     case 'edge':
+        //         alert("You've got the Edge");
+        //         break;
+        //     case 'chrome':
+        //         alert("Okay we support this browser too");
+        //         break;
+        //     case 'firefox':
+        //         alert("Okay we support this browser too");
+        //         break;
+        //     case 'safari':
+        //         alert("Okay we support this browser too");
+        //         break;
+        //     case 'opera':
+        //         alert("Okay we support this browser too");
+        //         break;
+        //     default:
+        //         alert("We hope that, this page looks ok !");
+        // }
+        //Bài 2:
+        // let a = parseInt(prompt('a?', ''));
+        // switch (a) {
+        //     case 0:
+        //         alert(0);
+        //         break;
+        //     case 1:
+        //         alert(1);
+        //         break;
+        //     case 2:
+        //     case 3:
+        //         alert('2,3');
+        //         break;
+        // }
+        //Bài 3:
+         let inputNumber = prompt("Enter a number", 0);
+        // if (inputNumber > 0) {
+        //     alert(1);
+        // } else if (inputNumber < 0) {
+        //     alert(-1);
+        // } else {
+        //     alert(0);
+        // }
+        //thay thế if...else bằng switch...case trong bài 3 này thì không chạy được ?????
+        switch (inputNumber) {
+            case inputNumber > 0:
+                alert(1);
+                break;
+            case inputNumber < 0:
+                alert(-1);
+                break;
+            default:
+                alert(0);
+        }
+    </script>
+</body>
+</html>
