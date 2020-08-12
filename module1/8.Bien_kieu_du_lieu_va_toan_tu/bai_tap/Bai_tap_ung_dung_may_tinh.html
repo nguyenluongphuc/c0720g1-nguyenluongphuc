@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính đơn giản</title>
+</head>
+<body>
+    <form>
+        <input type="number" id="so1"/>
+        <input type="number" id="so2"/><br><br>
+        <button type="button" onclick="congSo()">Addition(+)</button>
+        <button type="button" onclick="truSo()">Subtraction(-)</button>
+        <button type="button" onclick="nhanSo()">Multiplication(x)</button>
+        <button type="button" onclick="chiaSo()">Division(/)</button>
+    </form><br><br>
+    <label id="ketQua"></label>
+    <script>
+        let soThu1 = document.getElementById("so1");
+        let soThu2 = document.getElementById("so2");
+        function congSo() {
+            //let soThu1 = parseFloat(soThu1.value);
+            //let soThu2 = parseFloat(soThu2.value);
+                document.getElementById("ketQua").innerHTML = "Result :" + (parseFloat(soThu1.value)+parseFloat(soThu2.value));
+        }
+        function truSo() {
+            let number1 = parseFloat(soThu1.value);
+            let number2 = parseFloat(soThu2.value);
+                document.getElementById("ketQua").innerHTML = "Result :" + (number1-number2);
+        }
+        function nhanSo() {
+            //let soThu1 = parseFloat(soThu1.value);
+            //let soThu2 = parseFloat(soThu2.value);
+                document.getElementById("ketQua").innerHTML = "Result :" + (parseFloat(soThu1.value)*parseFloat(soThu2.value));
+        }
+        function chiaSo() {
+            let number1 = parseFloat(soThu1.value);
+            let number2 = parseFloat(soThu2.value);
+                document.getElementById("ketQua").innerHTML = "Result :" + (number1/number2);
+        }
+    </script>
+</body>
+</html>
