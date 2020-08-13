@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+    <script>
+        // nội mạng 200đ/1 phút ; ngoại mạng 1500đ/1 phút
+        let loaiCuocGoi = prompt("Nhập vào loại cuộc gọi","nội mạng hay ngoại mạng");
+        if (loaiCuocGoi == "nội mạng") {
+            let thoiGian = parseFloat(prompt("Nhập vào tổng số phút gọi nội mạng"));
+            let giaCuoc = 200 * thoiGian;
+            alert("Giá cước nội mạng là " + giaCuoc + "đồng");
+        } else {
+            let thoiGian2 = parseFloat(prompt("Nhập vào tổng số phút gọi ngoại mạng"));
+            let giaCuoc2 = 1500 * thoiGian2;
+            alert("Giá cước ngoại mạng là " + giaCuoc2 + "đồng");
+        }
+
+    </script>
+</body>
+</html>

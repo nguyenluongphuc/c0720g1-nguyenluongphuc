@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+    <script>
+        let income = parseFloat(prompt("nhập vào thu nhập tháng (đồng)"));
+        if (income < 8000000) {
+            alert("Được miễn thuế thu nhập cá nhân");
+        } else {
+            alert("thuế thu nhập cá nhân phải nộp là : " + (income * 10 / 100) + " đồng");
+        }
+    </script>
+</body>
+</html>

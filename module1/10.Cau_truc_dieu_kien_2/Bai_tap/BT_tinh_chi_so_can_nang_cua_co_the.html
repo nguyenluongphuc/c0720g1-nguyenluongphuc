@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng của cơ thể</title>
+</head>
+<body>
+    <script>
+        let weight = parseFloat(prompt("Tell me your weight (kilogram)"));
+        let height = parseFloat(prompt("Tell me your height (meter)"));
+        let bmi = weight / (height^2);
+        if (bmi < 18.5) {
+            alert("You are Underweight, try to eat more !");
+        } else if (bmi < 25) {
+            alert("Normally, good job, keep taking care of yourselft");
+        } else if (bmi < 30) {
+            alert("Overweight, may be you need to work out more and less food");
+        } else {
+            alert("Oh, no ! You are OBESE, discipline yourselft, and find an expert");
+        }
+    </script>
+</body>
+</html>

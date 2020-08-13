@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra cạnh tam giác</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(prompt("nhập vào số a"));
+        let b = parseFloat(prompt("nhập vào số b"));
+        let c = parseFloat(prompt("nhập vào số c"));
+        if ( a > 0 && b > 0 && c > 0 && (a + b) > c && (b + c) > a && (a + c) > b) {
+            alert("các số vừa nhập có thể là số đo các cạnh của một tam giác");
+        } else {
+            alert("các số vừa nhập không thể là số đo các cạnh của một tam giác");
+        }
+    </script>
+</body>
+</html>

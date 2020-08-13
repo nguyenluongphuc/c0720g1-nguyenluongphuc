@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực của học sinh</title>
+</head>
+<body>
+    <script>
+        let kiemTra = parseFloat(prompt("Nhập điểm kiểm tra"));
+        let giuaKy = parseFloat(prompt("Nhập điểm thi giữa kì"));
+        let cuoiKy = parseFloat(prompt("Nhập điểm thi cuối kì"));
+        let trungBinh = (kiemTra + giuaKy + cuoiKy)/3;
+        if (trungBinh == 10) {
+            alert("Học sinh này thật xuất sắc");
+        } else if (trungBinh > 7) {
+            alert("Học sinh này giỏi");
+        } else if (trungBinh >5) {
+            alert("Học sinh này khá");
+        } else if (trungBinh == 5) {
+            alert("Học sinh này đạt mức trung bình");
+        } else {
+            alert("Học sinh này thật yếu, không đạt");
+        }
+    </script>
+</body>
+</html>
