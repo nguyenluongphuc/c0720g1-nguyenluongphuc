@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 1 CaseStudy</title>
+</head>
+<body>
+<script>
+    let name = prompt("Họ và tên");
+    let idNumber = prompt("Nhập số CMND");
+    let dateOfBirth = prompt("Nhập ngày sinh");
+    let email = prompt("Nhập địa chỉ E-mail");
+    let address = prompt("Nhập địa chỉ");
+    let memberCard = prompt("Loại thẻ thành viên","diamond,platinum,gold,silver,member");
+    let discount = parseFloat(prompt("Giảm giá (%)"));
+    let follower = prompt("Số người đi kèm");
+    let stayDay = parseInt(prompt("Số ngày thuê"));
+    let service = prompt("Loại dịch vụ","villa,house,room");
+    let roomType = prompt("Loại phòng","vip,business,normal");
+    if (service == "villa") {
+        let phaiTra1 = 500 * stayDay * (1 - discount/100);
+        alert ( "Tên : " + name + " ; " + "CMND số : " + idNumber + " ; " + "Ngày sinh : " + dateOfBirth + " ; "
+            + "E-mail : " + email + " ; " + "Địa chỉ : " + address + " ; " + "Loại thẻ thành viên : " + memberCard + " ; "
+            + "Giảm giá : "+ discount + "% ; " + "Số người đi kèm : " + follower + " ; " + "Số ngày thuê : " + stayDay + " ; "
+            + "Loại dịch vụ : " + service + " ; " + "Loại phòng : " + roomType + " ; " + "Số tiền phải trả : " + phaiTra1 + "USD");
+    } else if (service == "house") {
+        let phaiTra2 = 300 * stayDay * (1 - discount/100);
+        alert ( "Tên : " + name + " ; " + "CMND số : " + idNumber + " ; " + "Ngày sinh : " + dateOfBirth + " ; "
+            + "E-mail : " + email + " ; " + "Địa chỉ : " + address + " ; " + "Loại thẻ thành viên : " + memberCard + " ; "
+            + "Giảm giá : "+ discount + "% ; " + "Số người đi kèm : " + follower + " ; " + "Số ngày thuê : " + stayDay + " ; "
+            + "Loại dịch vụ : " + service + " ; " + "Loại phòng : " + roomType + " ; " + "Số tiền phải trả : " + phaiTra2 + "USD");
+    } else {
+        let phaiTra3 = 100 * stayDay * (1 - discount/100);
+        alert ( "Tên : " + name + " ; " + "CMND số : " + idNumber + " ; " + "Ngày sinh : " + dateOfBirth + " ; "
+            + "E-mail : " + email + " ; " + "Địa chỉ : " + address + " ; " + "Loại thẻ thành viên : " + memberCard + " ; "
+            + "Giảm giá : "+ discount + "% ; " + "Số người đi kèm : " + follower + " ; " + "Số ngày thuê : " + stayDay + " ; "
+            + "Loại dịch vụ : " + service + " ; " + "Loại phòng : " + roomType + " ; " + "Số tiền phải trả : " + phaiTra3 + "USD");
+    }
+</script>
+<p>Bảng giá tham khảo :</p>
+<p>- Villa 500$/ngày</p>
+<p>- House 300$/ngày</p>
+<p>- Room 100$/ngày</p>
+
+</body>
+</html>
