@@ -6,10 +6,8 @@
 </head>
 <body>
     <form>
-        <fieldset style="width: 500px; height: 600px">
-            <fieldset style="width: 450px; height: 50px">
-                <label id="screen"></label>
-            </fieldset><br><br>
+        <fieldset style="width: 200px; height: 200px">
+            <input type="text" id="screen"><br><br>
             <button type="button" onclick="number1()">1</button>
             <button type="button" onclick="number2()">2</button>
             <button type="button" onclick="number3()">3</button>
@@ -30,7 +28,51 @@
     </form>
     <script>
         function number1() {
-            document.getElementById("screen").innerHTML = 1;
+            document.getElementById("screen").value += "1";
+        }
+        function number2() {
+            document.getElementById("screen").value += "2";
+        }
+        function number3() {
+            document.getElementById("screen").value += 3;
+        }
+        function plus() {
+            document.getElementById("screen").value += "+";
+        }
+        function number4() {
+            document.getElementById("screen").value += 4;
+        }
+        function number5() {
+            document.getElementById("screen").value += 5;
+        }
+        function number6() {
+            document.getElementById("screen").value += 6;
+        }
+        function minus() {
+            document.getElementById("screen").value += "-";
+        }
+        function number7() {
+            document.getElementById("screen").value += 7;
+        }
+        function number8() {
+            document.getElementById("screen").value += 8;
+        }
+        function number9() {
+            document.getElementById("screen").value += 9;
+        }
+        function multiply() {
+            document.getElementById("screen").value += "*";
+        }
+        function number0() {
+            document.getElementById("screen").value += "0";
+        }
+        function divide(){
+            document.getElementById("screen").value += "/";
+        }
+        function equal() {
+            let string = document.getElementById("screen").value;
+            result = eval(string);
+            document.getElementById("screen").value = result;
         }
     </script>
 </body>
