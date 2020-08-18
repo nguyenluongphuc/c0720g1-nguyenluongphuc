@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa của một số nguyên</title>
+</head>
+<body>
+<script>
+    //n là 1 số tự nhiên dương
+    //n giai thừa = n! là tích của n số tự nhiên dương đầu tiên
+    //cho người dùng nhâp vào số tự nhiên dương n
+    let n = parseInt(prompt("Nhập vào 1 số tự nhiên dương"));
+    let i;
+    let giaiThua = 1;
+    for (i = 1; i <= n; i++) {
+        giaiThua *= i;
+    }
+    alert("giai thừa của số bạn vừa nhập là " + giaiThua);
+</script>
+</body>
+</html>

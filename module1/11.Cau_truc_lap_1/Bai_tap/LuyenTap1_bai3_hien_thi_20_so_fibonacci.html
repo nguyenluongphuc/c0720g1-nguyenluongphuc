@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị 20 fibonacci đầu tiên</title>
+</head>
+<body>
+    <script>
+        //fibonacci là dãy số khởi đầu là (0 và 1) hoặc (1 và 1)
+        //các số tiếp theo sẽ bằng tổng 2 số kề trước
+        //sau đây, hiển thị 20 số đầu tiên trong dãy fibonacci bắt đầu là (0 và 1)
+        //0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,1597,2584,4181
+        let f1 = 0;
+        let f2 = 1;
+        let first20 = 3;
+        let resultF = f1 + "," + f2 + ",";
+        while (first20 <= 20) {
+            let fn = f1 + f2;
+            resultF = resultF + fn + ",";
+            f1 = f2;
+            f2 = fn;
+            first20++;
+        }
+        alert(resultF);
+    </script>
+</body>
+</html>

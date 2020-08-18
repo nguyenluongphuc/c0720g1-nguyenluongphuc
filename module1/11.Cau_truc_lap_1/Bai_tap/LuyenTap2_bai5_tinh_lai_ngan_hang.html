@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+<script>
+    //số tiền vay 500.000.000
+    // số tháng vay 5 năm = 60 tháng
+    // lãi suất 10.5 % / 1 năm , vậy mỗi tháng 0.875%
+    let tienVay = 500000000;
+    let tienGocMoiThang = 5000000;
+    let soThang = 60;
+    let laiSuat = (tienVay * 0.875) / 100;
+    let moiThangPhaiTra = laiSuat + tienGocMoiThang;
+    // tien vay * lai suat/ 100
+    //lặp 60 lần
+    //sau mỗi lần lặp tiền vay = tien vay - (lai suat + tien goc moi thang)
+    while ( soThang <= 60 ) {
+        tienVay = tienVay - moiThangPhaiTra;
+        laiSuat = (tienVay * 0.875) / 100;
+        document.write("tiền vay còn lại là " + tienVay + "<br>" + "lãi suất tháng này là " + laiSuat);
+        soThang++;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sinh bảng cửu chương</title>
+</head>
+<body>
+    <script>
+    //áp dụng while
+        // let a;
+        // let b = 1;
+        // let table = "<table border='1'>";
+        // while (b <= 9) {
+        //     a = 2;
+        //     table = table + "<tr>";
+        //     while (a <= 9) {
+        //         table = table + "<td>" + a + "x" + b + "=" + (a * b) + "</td>";
+        //         a++;
+        //     }
+        //     table = table + "</tr>";
+        //     b++;
+        // }
+        // table = table + "</table>";
+        // document.write(table);
+    //áp dụng for
+    //     let a;
+    //     let b;
+    //     let table = "<table border='1'>";
+    //     for (b = 1; b <= 9; b++) {
+    //         table = table + "<tr>";
+    //         for (a = 2; a <= 9; a++ ) {
+    //             table = table + "<td>" + a + "x" + b + "=" + (a*b) + "</td>";
+    //         }
+    //         table = table + "</tr>";
+    //     }
+    //     table = table + "</table>";
+    //     document.write(table);
+    //áp dụng do...while
+        let a = 2;
+        let b = 1;
+        let table = "<table border='1'>";
+        do {
+            a = 2;
+            table = table + "<tr>";
+            do {
+                table = table + "<td>" + a + "x" + b + "=" + (a*b) + "</td>";
+                a++;
+            } while ( a <= 9);
+            table = table + "</tr>";
+            b++;
+        } while (b <=9 );
+        table = table + "</table>";
+        document.write(table);
+    </script>
+</body>
+</html>

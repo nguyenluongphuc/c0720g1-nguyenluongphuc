@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tư vấn nhiệt độ</title>
+</head>
+<body>
+    <script>
+        let temprature;
+        while (true) {
+            temprature = parseFloat(prompt("hãy nhập nhiệt độ"));
+            if (temprature > 100) {
+                alert("hãy giảm bớt nhiệt độ");
+            } else if (temprature < 20) {
+                alert("hãy tăng nhiệt độ lên");
+            } else {
+                alert("tạm ổn");
+            }
+
+        }
+    </script>
+</body>
+</html>

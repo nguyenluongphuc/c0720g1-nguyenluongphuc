@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case study</title>
+</head>
+<body>
+    <script>
+        let name = "Nguyễn Văn A";
+        let idNumber = "123456789";
+        let dateOfBirth = "21/04/1991";
+        let email = "abc123@gmail.com";
+        let address = "Đà Nẵng";
+        let memberCard = "diamond";
+        let follower = 5;
+        let stayDay = 5;
+        let service = "villa";
+        let roomType = "vip";
+        let menu = prompt("1.Show information customer" + "\n"
+                        + "2.Edit information customer" + "\n"
+                        + "3.Show the amount to be paid after discount" + "\n"
+                        + "Chọn số thứ tự tương ứng rồi nhập vào");
+        switch (menu) {
+            case "1":
+                alert("Tên kh : " + name + "\n"
+                    + "Số cmnd : " + idNumber + "\n"
+                    + "Ngày sinh : " + dateOfBirth + "\n"
+                    + "E-mail : " + email + "\n"
+                    + "Địa chỉ : " + address + "\n"
+                    + "Loại thẻ thành viên : " + memberCard + "\n"
+                    + "Số người đi kèm : " + follower + "\n"
+                    + "Số ngày ở lại : " + stayDay + "\n"
+                    + "Loại dịch vụ : " + service + "\n"
+                    + "Loại phòng : " + roomType + "\n");
+                break;
+            case "2":
+                    let editInfo = prompt("1.Tên kh : " + name + "\n"
+                    + "2.Số cmnd : " + idNumber + "\n"
+                    + "3.Ngày sinh : " + dateOfBirth + "\n"
+                    + "4.E-mail : " + email + "\n"
+                    + "5.Địa chỉ : " + address + "\n"
+                    + "6.Loại thẻ thành viên : " + memberCard + "\n"
+                    + "7.Số người đi kèm : " + follower + "\n"
+                    + "8.Số ngày ở lại : " + stayDay + "\n"
+                    + "9.Loại dịch vụ : " + service + "\n"
+                    + "10.Loại phòng : " + roomType + "\n"
+                    + "Chọn số tương ứng thông tin cần chỉnh sửa");
+                    switch (editInfo) {
+                            case "1":
+                                name = prompt("Nhập mới");
+                                break;
+                            case "2":
+                                idNumber = prompt("Nhập mới");
+                                break;
+                            case "3":
+                                dateOfBirth = prompt("Nhập mới");
+                                break;
+                            case "4":
+                                email = prompt("Nhập mới");
+                                break;
+                            case "5":
+                                address = prompt("Nhập mới");
+                                break;
+                            case "6":
+                                memberCard = prompt("Nhập mới");
+                                break;
+                            case "7":
+                                follower = prompt("Nhập mới");
+                                break;
+                            case "8":
+                                stayDay = prompt("Nhập mới");
+                                break;
+                            case "9":
+                                service = prompt("Nhập mới");
+                                break;
+                            case "10":
+                                roomType = prompt("Nhập mới");
+                                break;
+
+                    }
+                alert("1.Tên kh : " + name + "\n"
+                    + "2.Số cmnd : " + idNumber + "\n"
+                    + "3.Ngày sinh : " + dateOfBirth + "\n"
+                    + "4.E-mail : " + email + "\n"
+                    + "5.Địa chỉ : " + address + "\n"
+                    + "6.Loại thẻ thành viên : " + memberCard + "\n"
+                    + "7.Số người đi kèm : " + follower + "\n"
+                    + "8.Số ngày ở lại : " + stayDay + "\n"
+                    + "9.Loại dịch vụ : " + service + "\n"
+                    + "10.Loại phòng : " + roomType + "\n");
+                break;
+            case "3":
+                let cost = 0;
+                if ( service === "villa") {
+                    cost = 500;
+                } else if (service === "house") {
+                    cost = 300;
+                } else {
+                    cost = 100;
+                }
+                let discount = 0;
+                if (address === "Đà Nẵng") {
+                    discount += 20;
+                } else if (address === "Huế") {
+                    discount += 10;
+                } else if (address === "Quảng Nam") {
+                    discount +=5;
+                }
+                if (stayDay >= 7) {
+                    discount += 30;
+                } else if (stayDay >= 5 && stayDay < 7) {
+                    discount += 20;
+                } else if (stayDay >= 2 && stayDay < 4) {
+                    discount += 10;
+                }
+                if (memberCard === "diamond") {
+                    discount += 15;
+                } else if (memberCard === "platinum") {
+                    discount += 10;
+                } else if (memberCard === "gold") {
+                    discount += 5;
+                } else if (memberCard === "silver") {
+                    discount += 2;
+                } else {
+                    discount += 0;
+                }
+                let currentYear = new Date().getFullYear();
+                let birthDay = new Date(dateOfBirth).getFullYear();
+                let ageCustomer = currentYear - birthDay;
+                if (ageCustomer >= 30 && address === "Đà Nẵng") {
+                    discount += 2;
+                } else if (ageCustomer >= 20 && ageCustomer < 30 && address === "Đà Nẵng") {
+                    discount +=1;
+                }
+                alert("Số tiền phải trả là : " + (cost * stayDay - discount) + "USD");
+                break;
+        }
+    </script>
+</body>
+</html>

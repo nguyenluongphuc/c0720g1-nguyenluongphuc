@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng 30 số chia hết cho 7 đầu tiên trong các số tự nhiên</title>
+</head>
+<body>
+    <script>
+        let a = 0;
+        let total = 0;
+        let times = 0;
+        while (times < 30) {
+            if (a % 7 === 0) {
+                total += a;
+                times++;
+            }
+            a++;
+        }
+        alert(total);
+    </script>
+</body>
+</html>

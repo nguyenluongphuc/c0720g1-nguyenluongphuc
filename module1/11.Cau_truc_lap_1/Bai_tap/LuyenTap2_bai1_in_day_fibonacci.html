@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In dãy fibonacci</title>
+</head>
+<body>
+<script>
+    let range = parseInt(prompt("nhập vào số lượng số, trong dãy fibonacci 0,1,... mà bạn muốn in ra"));
+    let f1 = 0;
+    let f2 = 1;
+    let soLuong = 3;
+    let resultF = f1 + "-" + f2 + "-";
+    while (soLuong <= range) {
+        let fn = f1 + f2;
+        resultF += fn + "-";
+        f1 = f2;
+        f2 =fn;
+        soLuong++;
+    }
+    alert(resultF);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In các số từ 1 đến 100</title>
+</head>
+<body>
+    <script>
+        let inRa = " ";
+        for (let i = 1; i <= 100; i++) {
+            if ((i % 3 === 0) && (i % 5 === 0)) {
+                inRa += "FizzBuzz--";
+            } else if (i % 3 === 0) {
+                inRa += "Fizz--";
+            } else if (i % 5 === 0) {
+                inRa += "Buzz--";
+            } else {
+                inRa += i + "--";
+            }
+        }
+        alert(inRa);
+    </script>
+</body>
+</html>
