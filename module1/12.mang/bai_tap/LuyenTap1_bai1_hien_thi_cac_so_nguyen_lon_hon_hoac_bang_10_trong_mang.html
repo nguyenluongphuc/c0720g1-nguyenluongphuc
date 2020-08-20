@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khởi tạo mảng số nguyên 10 phần tử</title>
+</head>
+<body>
+<script>
+    let mang = [ 65 , 20 , 10 , 5 , 80 , 3 , 7 , 35 , 60 , 1 ];
+    let ketQua = "";
+    for (let i = 0 ; i < mang.length ; i++) {
+        if ( mang[i] >= 10 ) {
+            ketQua += mang[i] + ",";
+        }
+    }
+    alert("Các giá trị lớn hơn hoặc bằng 10 trong mảng đã cho là : " + ketQua);
+</script>
+</body>
+</html>

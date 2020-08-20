@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị lớn nhất trong mảng cho trước</title>
+</head>
+<body>
+<script>
+    let mang = [-3, 5, 1, 3, 2, 10];
+    let i;
+    let viTri = 0;
+    let max = mang[0];
+    for (i = 0 ; i < mang.length ; i++) {
+        if (mang[i] > max) {
+            max = mang[i];
+            viTri = i;
+        }
+    }
+    alert("số lớn nhất là " + max + " vị trí trong mảng là " + viTri);
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển Anh - Việt đơn giản</title>
+</head>
+<body>
+    <h2>English - Vietnamese Dictionary</h2>
+    <input type="text" id="tuCanTra" value="English"/>
+    <button type="button" onclick="traTu()">Translate</button>
+    <p id="ketQua"></p>
+<script>
+    let english = [ "pen" , "ruler" , "apple" , "cat" , "dog" , "car" , "computer" , "book" ];
+    let vietnam = ["cây bút" , "thước kẻ" , "quả táo" , "con mèo" , "con chó" , "xe hơi" ,
+                    "máy vi tính" , "quyển sách"];
+    function traTu() {
+        let tuTra = document.getElementById("tuCanTra").value;
+        for (let i = 0 ; i < english.length ; i++) {
+            if ( english[i] == tuTra) {
+                document.getElementById("ketQua").innerHTML = vietnam[i];
+                break;
+            } else {
+                document.getElementById("ketQua").innerHTML = "sorry ! not found";
+            }
+        }
+
+    }
+
+    //cách 2
+
+    // let english = [ "pen" , "ruler" , "apple" , "cat" , "dog" , "car" , "computer" , "book" ];
+    // let vietnam = ["cây bút" , "thước kẻ" , "quả táo" , "con mèo" , "con chó" , "xe hơi" ,
+    //     "máy vi tính" , "quyển sách"];
+    // let ketQua="";
+    // let check=false;
+    // function traTu() {
+    //     let tuTra = document.getElementById("tuCanTra").value;
+    //     for (let i = 0 ; i < english.length ; i++) {
+    //         if ( english[i] === tuTra) {
+    //             check=true;
+    //             ketQua=vietnam[i];
+    //             break;
+    //         }
+    //     }
+    //     if (check){
+    //         document.getElementById("ketQua").innerHTML=ketQua;
+    //     }else {
+    //         document.getElementById("ketQua").innerHTML="Không tìm thấy";
+    //     }
+    // }
+
+    //cách 3
+
+    // let english = [ "pen" , "ruler" , "apple" , "cat" , "dog" , "car" , "computer" , "book" ];
+    // let vietnam = ["cây bút" , "thước kẻ" , "quả táo" , "con mèo" , "con chó" , "xe hơi" ,
+    //     "máy vi tính" , "quyển sách"];
+    // function traTu() {
+    //     let ketQua=""
+    //     let tuTra = document.getElementById("tuCanTra").value;
+    //     for (let i = 0 ; i < english.length ; i++) {
+    //         if ( english[i] == tuTra) {
+    //             ketQua=vietnam[i]
+    //             break;
+    //         }else {
+    //             ketQua = "sorry ! not found";
+    //         }
+    //     }
+    //     document.getElementById("ketQua").innerHTML = ketQua;
+    // }
+</script>
+</body>
+</html>

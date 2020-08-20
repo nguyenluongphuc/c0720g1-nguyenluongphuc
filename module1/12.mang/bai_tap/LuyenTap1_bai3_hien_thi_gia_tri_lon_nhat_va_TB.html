@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [ 25 , 15 , 2 , 7 , 48 , 1 , 64 , 59 , 77 , 10 ];
+    let max = mang[0];
+    let total = mang[0];
+    for (let i = 1 ; i < mang.length ; i++) {
+        if (mang[i] > max) {
+            max = mang[i];
+        }
+        total += mang[i];
+    }
+    let average = total / mang.length;
+    alert("Giá trị lớn nhất là " + max + "\n"
+        + "Giá trị trung bình các phần tử trong mảng là " + average);
+
+</script>
+</body>
+</html>

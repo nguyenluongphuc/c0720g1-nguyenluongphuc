@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let enterArr = [];
+    for (let i = 0 ; i < 5 ; i++) {
+        let a = parseInt(prompt("nhập vào số nguyên âm hoặc dương"));
+        enterArr.push(a);
+    }
+    let count = 0;
+    let ketQua = "";
+    for (let j = 0 ; j < enterArr.length ; j++) {
+        if (enterArr[j] < 0) {
+            count += 1;
+            ketQua += enterArr[j] + ",";
+        }
+    }
+    alert("Bạn đã nhập vào " + count + " số nguyên âm đúng không ?" + "\n" +
+            "Đó là " + ketQua);
+</script>
+</body>
+</html>

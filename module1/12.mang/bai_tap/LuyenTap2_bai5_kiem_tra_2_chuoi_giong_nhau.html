@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chuoi1 = "đây là chuỗi thứ nhất";
+    let chuoi2 = "đây là chuỗi thứ hai";
+    // chuyển 2 chuỗi này thành 2 mảng tương ứng
+    let mang1 = chuoi1.split(" ");
+    let mang2 = chuoi2.split(" ");
+    //let count = 0;
+    for (let i = 0 ; i < mang1.length ; i++) {
+        if (mang1[i] !== mang2[i]) {
+            alert("hai chuỗi không giống nhau");
+        } else {
+            //count += 1;
+            alert("hai chuỗi giống nhau");
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = new Array(10);
+    let b = new Array(10);
+    for (let i = 0 ; i < 10 ; i++) {
+        let enterA = parseInt(prompt("nhập giá trị vị trí " + i + " cho mảng thứ 1"));
+        a[i] = enterA;
+    }
+    for (let j = 0 ; j < 10 ; j++) {
+        let enterB = parseInt(prompt("nhập giá trị vị trí " + j + " cho mảng thứ 2"));
+        b[j] = enterB;
+    }
+    let c = [b.concat(a)];
+    console.log(c);
+</script>
+
+</body>
+</html>

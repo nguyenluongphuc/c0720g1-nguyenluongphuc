@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mangKyTu = [ "a" , 3 , "r" , "c" , 4 , 8 , "d" , "e" , "s" , 2 ];
+    document.write("kích thước của mảng đang có là " + mangKyTu.length + "<br>");
+    let count = 0;
+    for (let i = 0 ; i < mangKyTu.length ; i++) {
+        if (typeof mangKyTu[i] === "number") {
+            count += 1;
+        }
+    }
+    document.write("trong mảng có " + count + " giá trị là kiểu số");
+</script>
+</body>
+</html>

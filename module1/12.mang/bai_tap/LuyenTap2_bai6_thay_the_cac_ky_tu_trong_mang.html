@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let enterString = prompt("nhập vào chuỗi kí tự");
+    let mang = enterString.split("");
+    alert("mảng vừa nhập vào là " + mang);
+    for ( let i = 0 ; i < mang.length ; i++) {
+        if (mang[i] == "-") {
+            mang[i] = "_";
+        }
+    }
+    alert("nếu trong mảng có '-' thì sẽ thay bằng '_' ta có " + mang );
+</script>
+</body>
+</html>

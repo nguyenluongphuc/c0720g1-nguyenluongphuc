@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm phần tử lớn nhất và vị trí trong mảng</title>
+</head>
+<body>
+<script>
+    let mang = [ 25 , 15 , 2 , 7 , 48 , 1 , 64 , 59 , 77 , 10 ];
+    let max = mang[0];
+    let viTri;
+    for (let i = 1 ; i < mang.length ; i++) {
+        if (mang[i] > max) {
+            max = mang[i];
+            viTri = i;
+        }
+    }
+    alert("Giá trị lớn nhất trong mảng là " + max + " vị trí " + viTri);
+</script>
+</body>
+</html>

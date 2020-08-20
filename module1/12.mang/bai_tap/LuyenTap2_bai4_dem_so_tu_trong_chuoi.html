@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số từ trong 1 chuỗi</title>
+</head>
+<body>
+<script>
+    let chuoi = "đây là một chuỗi";
+    //dùng hàm split để chuyển chuổi thành mảng
+    let mang = chuoi.split(" ");
+    //sau đó thao tác như với mảng
+    // cách 1
+    //let count;
+    // count = mang.length;
+    // document.write("số từ trong chuỗi là " + count);
+    //cách 2
+    let count = 0;
+    for (let i = 0 ; i < mang.length ; i++) {
+        count += 1;
+    }
+    document.write("số từ trong chuỗi là " + count);
+</script>
+</body>
+</html>
