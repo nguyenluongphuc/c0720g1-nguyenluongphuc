@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let circleRadius = parseFloat(prompt("Nhập vào bán kính hình tròn (centimeter)"));
+    let choose = parseInt(prompt("Nhập số thứ tự tương ứng điều bạn muốn" + "\n"
+                                    + "1. Tính diện tích hình tròn" + "\n"
+                                    + "2. Tính chu vi hình tròn" + "\n"));
+    switch (choose) {
+            case 1:
+                alert("Diện tích hình tròn là " + computeCircleArea(circleRadius) + " cm");
+                break;
+            case 2:
+                alert("Chu vi hình tròn là " + computeCirclePerimeter(circleRadius) + " cm");
+                break;
+    }
+
+    function computeCircleArea(radius) {
+            return ( radius * radius ) * 3.14;
+    }
+    function computeCirclePerimeter(radius) {
+            return ( 2 * radius ) * 3.14;
+    }
+</script>
+
+</body>
+</html>

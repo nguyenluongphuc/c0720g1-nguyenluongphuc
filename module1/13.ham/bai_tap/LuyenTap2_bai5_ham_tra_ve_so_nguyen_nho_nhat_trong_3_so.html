@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputInteger1 = parseInt(prompt("Nhập vào số nguyên thứ 1"));
+    let inputInteger2 = parseInt(prompt("Nhập vào số nguyên thứ 2"));
+    let inputInteger3 = parseInt(prompt("Nhập vào số nguyên thứ 3"));
+    alert("Sau khi so sánh, số nhỏ nhất là " + findMinIn3Number( inputInteger1 , inputInteger2 , inputInteger3));
+
+    function findMinIn3Number( number1 , number2 , number3 ) {
+            let min = number1;
+            if ( number2 < min && number2 < number3 ) {
+                min = number2;
+                return min;
+            } else if ( number3 < min && number3 < number2 ) {
+                min = number3;
+                return min;
+            } else {
+                return min;
+            }
+    }
+</script>
+</body>
+</html>

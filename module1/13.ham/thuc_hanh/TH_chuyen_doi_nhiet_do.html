@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng chuyển đổi độ F sang độ C</title>
+</head>
+<body>
+<h2>Temperature Converter</h2>
+<p>Type a value in the Fahrenheit field to convert the value to Celcius :</p>
+Fahrenheit <input type="number" id="fahrenheit" oninput="convertF2C(this.value)"/>
+<p id="result"></p>
+
+<script>
+    function convertF2C(fahrValue) {
+        //let fahrValue = document.getElementById("fahrenheit").value; //dùng cái này thì xóa this.value ở trên thẻ input
+        let celciusValue = (fahrValue - 32) / 1.8;
+        document.getElementById("result").innerHTML = "Celcius : " + celciusValue;
+
+    }
+
+</script>
+</body>
+</html>

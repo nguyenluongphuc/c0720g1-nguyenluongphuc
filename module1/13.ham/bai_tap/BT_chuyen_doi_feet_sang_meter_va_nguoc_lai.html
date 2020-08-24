@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feet and Meter Converter</title>
+</head>
+<body>
+    <h2>Welcome to the Converter</h2>
+        <label for="fromFeet">From Feet</label>
+        <input type="number" id="fromFeet" oninput="foot2Meter(this.value)"/>
+        <label>to Meter : </label>
+        <label id="toMeter"></label>
+    <br><br>
+        <label for="fromMeter">From Meter</label>
+        <input type="number" id="fromMeter" oninput="meter2Foot(this.value)"/>
+        <label>to Feet : </label>
+        <label id="toFeet"></label>
+<script>
+    //cách 1
+    function foot2Meter(foot) {
+        document.getElementById("toMeter").innerHTML = (0.305 * foot) + " meters";
+    }
+    function meter2Foot(meter) {
+        document.getElementById("toFeet").innerHTML = (3.279 * meter) + " feets";
+    }
+
+    //cách 2 thì phải thay đổi html ở trên kèm theo button ! tuy nhiên hàm có thể dễ tái sử dụng hơn.
+    // let feetValue = document.getElementById("fromFeet").value;
+    // document.getElementById("toMeter").innerHTML = foot2Meter2(feetValue) + " meter";
+    // function foot2Meter2(foot) {
+    //     return 0.305 * foot;
+    // }
+    // let meterValue = document.getElementById("fromMeter").value;
+    // document.getElementById("toFeet").innerHTML = meter2Foot2(meterValue) + " meter";
+    // function meter2Foot2(meter) {
+    //     return 3.279 * meter;
+    // }
+</script>
+</body>
+</html>

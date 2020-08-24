@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập tên ngôi sao bạn muốn tìm</p>
+<input type="text" id="inputName" oninput="findStarLocation(this.value)"/>
+<p id="result"></p>
+<script>
+    // let inputName = prompt("Nhập vào tên ngôi sao bạn muốn tìm");
+    // alert(findStarLocation(inputName));
+
+    let starsName = [ "Polaris" , "Aldebaran" , "Deneb" , "Vega" , "Altair" , "Dubhe" , "Regulus" ];
+    let combineStars = [ "Ursa Minor" , "Tarurus" , "Cygnus" , "Lyra" , "Aquila" , "Ursa Major" , "Leo" ];
+
+    function findStarLocation(inputString) {
+        let check = true;
+        for (let i = 0 ; i < starsName.length ; i++) {
+            if ( inputString == starsName[i] ) {
+                check = false;
+                //return "Ngôi sao " + starsName[i] + " thuộc chòm sao " + combineStars[i];
+                document.getElementById("result").innerHTML = "Ngôi sao " + starsName[i] + " thuộc chòm sao " + combineStars[i];
+            }
+        }
+        if ( check ) {
+            //return "Không tìm thấy ngôi sao này !";
+            document.getElementById("result").innerHTML = "Không tìm thấy ngôi sao này ! Hoặc có thể bạn gõ phím nhầm, hãy chú ý ký tự hoa thường";
+        }
+    }
+    //tại sao khi dùng cách trong cmt thì bị lỗi bên dưới?
+    // Cannot access 'starsName' before initialization
+    // at findStarLocation
+
+</script>
+
+</body>
+</html>

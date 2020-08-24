@@ -8,15 +8,16 @@
 <script>
     let mang = [ 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 ];
     let v = parseInt(prompt("enter integer V"));
+    let ketQua = "";
     for (let i = 0 ; i < mang.length ; i++) {
         if (mang[i] === v) {
-            alert("V is in the array");
+            ketQua = "V is in the array";
             break;
+        } else {
+            ketQua = "V is not in the array";
         }
     }
-    alert("V is not in the array");
-
-
+    alert(ketQua);
 </script>
 </body>
 </html>

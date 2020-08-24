@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputArr = [3, 5, 1, 8, -3, 7, 8];
+    //let inputArr = [7, 12, 6, 9, 20, 56, 89];
+    //let inputArr = [];
+    //let inputArr = [0, 0, 0, 0, 0, 0];
+    //xét mảng nào thì mở cmt mảng nấy và đóng cmt mảng đang mở
+
+    let showResult = findMin(inputArr);
+    alert("the minimum value in the array is : " + showResult);
+
+    function findMin(inputArray) {
+        if (inputArray.length === 0) {
+            return "array is empty !";
+        }
+        let min = inputArray[0];
+        for (let i = 1 ; i < inputArray.length ; i++) {
+            if (inputArray[i] < min) {
+                min = inputArray[i];
+            }
+        }
+        return min;
+    }
+</script>
+
+</body>
+</html>

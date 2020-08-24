@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputNumber = parseFloat(prompt("Enter a number"));
+    if ( checkPositiveInteger(inputNumber) === true ) {
+        alert("It's positive number !");
+    } else if ( checkPositiveInteger(inputNumber) === false ) {
+        alert("It's negative number !");
+    } else {
+        alert(checkPositiveInteger(inputNumber));
+    }
+
+    function checkPositiveInteger(number) {
+            if ( number === 0) {
+                return "You entered 0";
+            } else if ( number < 0 ) {
+                return false;
+            } else if ( number > 0 ) {
+                return true;
+            }
+    }
+</script>
+</body>
+</html>

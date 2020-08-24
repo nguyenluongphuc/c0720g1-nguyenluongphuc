@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa một số</title>
+</head>
+<body>
+<script>
+    let inputNumber = parseInt(prompt("Enter an integer to know the factorial of it !"));
+    alert(computeFactorial(inputNumber));
+
+    function computeFactorial(number) {
+            if (number === 0) {
+               return "The factorial of " + inputNumber + " is " + 1;
+            } else if (number < 0) {
+               return "Sorry ! Positive number only !";
+            } else {
+               let factorialResult = 1;
+               for (let i = 1 ; i <= number ; i++) {
+                   factorialResult *= i;
+               }
+               return "The factorial of " + inputNumber + " is " + factorialResult;
+            }
+    }
+</script>
+</body>
+</html>

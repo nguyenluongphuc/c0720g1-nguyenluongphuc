@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="inputNumber">Come on ! Give me a number and I will give back to you another ! Let's see what !</label><br>
+    <input type="number" id="inputNumber" oninput="increaseNumber(this.value)"/>
+<!--    <button type="button" onclick="increaseNumber()">Click to see !</button>-->
+<!--    dùng cách 2 thì mở cmt và xóa oninput ở trên-->
+    <p id="result"></p>
+<script>
+    function increaseNumber(a) {
+        //let a = document.getElementById("inputNumber").value;
+        //dùng cách 2 thì mở cmt và xóa tham số a
+        a++;
+        document.getElementById("result").innerHTML = "Ta...da...I just increase your number to " + a;
+    }
+</script>
+</body>
+</html>

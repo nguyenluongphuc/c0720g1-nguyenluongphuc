@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let x = parseFloat(prompt("Mời bạn nhập số thứ 1"));
+        let y = parseFloat(prompt("Mời bạn nhập số thứ 2"));
+        check2Number(x,y);
+        function check2Number( a , b ) {
+            if ( a > b ) {
+                alert("Số thứ 1 lớn hơn số thứ 2 đấy bạn ạ ! Đề bài không bảo mình tính tổng cho trường hợp này ! Thế nhé !");
+            } else if ( a < b ) {
+                alert("Số thứ 1 nhỏ hơn số thứ 2 đấy bạn ạ ! Tổng của chúng đây " + ( a + b ));
+            } else if ( a === b ) {
+                alert("Hai số bạn vừa nhập bằng nhau đấy ! Tổng của chúng là " + ( a + b ));
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //có vấn đề ở dòng nhập vào khiến cho typeof luôn trả về kết quả string dù mình nhập số
+    let inputCharacter = prompt("Enter a character ! I will let you know something about it !");
+    if (characterCheck(inputCharacter) === true) {
+        alert("Your character is a number !");
+    } else {
+        alert("Your character is NOT a number !");
+    }
+
+    function characterCheck(character) {
+            if (typeof character === "number") {
+                return true;
+            } else {
+                return false;
+            }
+    }
+
+</script>
+</body>
+</html>

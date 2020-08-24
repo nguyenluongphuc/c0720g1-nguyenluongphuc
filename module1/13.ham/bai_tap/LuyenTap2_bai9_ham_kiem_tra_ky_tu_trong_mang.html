@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputCharacter = prompt("Enter a character");
+    let characterArray = [ 1 , "a" , 8 , 6 , "r" , "e" , 1 , 3 , 8 , "a" , "e" , "f" , 8 ];
+    alert(checkCharacterInArray(inputCharacter));
+
+    function checkCharacterInArray(character) {
+        let check = true;
+        let count = 0;
+            for (let i = 0 ; i < characterArray.length ; i++) {
+                if ( character == characterArray[i] ) {
+                    count += 1;
+                    check = false;
+                }
+            }
+            if (check) {
+                return -1;
+            }
+        return "Số lần xuất hiện trong mảng là " + count;
+    }
+</script>
+</body>
+</html>
