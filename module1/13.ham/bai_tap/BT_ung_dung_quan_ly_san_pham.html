@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng Dụng Quản Lý Sản Phẩm</title>
+</head>
+<body>
+<h2>Add New Product</h2>
+<input type="text" id="newProduct" value=""/>
+<button type="button" onclick="addNewProduct()">Add</button>
+<h2>Display All Product</h2>
+<label id="totalProduct"></label>
+<p id="displayAll"></p>
+
+</body>
+</html>
+
+<script>
+    let productArr = [];
+    
+    function addNewProduct() {
+        let newPro = document.getElementById("newProduct").value;
+        if (newPro == "") {
+            alert("Enter product name to add");
+        } else {
+            productArr.push(newPro);
+            document.getElementById("newProduct").value = "";
+        }
+        displayProduct();
+    }
+    
+    
+    function displayProduct() {
+        let displayTable = "<table border='1'>" +
+                            "<tr>" +
+                            "<th>Order</th>" +
+                            "<th>Product Name</th>" +
+                            "<th></th>" +
+                            "<th></th>" +
+                            "</tr>";
+        for (let i = 0 ; i < productArr.length ; i++) {
+            displayTable += "<tr> " +
+                            "<td>" + (i + 1) + "</td>" +
+                            "<td>" + productArr[i] + "</td>" +
+                            "<td><button type='button' onclick='editProduct(" + i + ")'>Edit</button></td>" +
+                            "<td><button type='button' onclick='deleteProduct(" + i + ")'>Delete</button></td>" +
+                            "</tr>"
+        }
+        displayTable += "</table>";
+        document.getElementById("displayAll").innerHTML = displayTable;
+        document.getElementById("totalProduct").innerHTML = productArr.length + " Products";
+    }
+    
+    function editProduct(id) {
+        let editName = prompt("Enter the new one");
+        if ( editName == null ) {
+            alert("So, you DON'T want to edit");
+        } else if ( editName == "" ) {
+            alert("You need to enter a new one to make thí job done");
+        } else {
+            productArr[id] = editName;
+        }
+        displayProduct();
+    }
+    
+    function deleteProduct(id) {
+        let check = confirm("You really want to delete this infomation");
+        if (check) {
+            productArr.splice(id,1);
+        }
+        displayProduct();
+    }
+</script>
