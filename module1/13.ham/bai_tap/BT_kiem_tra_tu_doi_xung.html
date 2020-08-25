@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+<script>
+    let inputStr = prompt("Enter what you think it's Palindrome, I will tell you it correct or not");
+    if (checkPalindrome(inputStr) == true) {
+        alert("Yeah ! That's correct !");
+    } else {
+        alert("NO, it's not correct, try another one");
+    }
+    function checkPalindrome(str) {
+        let re = /[\W_]/g;
+        let lowRegStr = str.toLowerCase().replace(re, '');
+        let reverseStr = lowRegStr.split('').reverse().join('');
+        if ( reverseStr === lowRegStr ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+<!--<script>-->
+<!--    let arr = (prompt('vui long nhap tu can kiem tra')).split("");-->
+<!--​       function isPalindrome(array) {-->
+<!--            if (array[0] === array[array.length-1]) {-->
+<!--                if (array.length <= 2) {-->
+<!--                    return true;-->
+<!--                } else {-->
+<!--                    array.pop();-->
+<!--                    array.shift();-->
+<!--                    console.log(array);-->
+<!--                    return isPalindrome(array);-->
+<!--                }-->
+<!--            } else-->
+<!--                return false;-->
+<!--        }-->
+<!--    console.log(isPalindrome(arr));-->
+<!--</script>-->
+
+</body>
+</html>
