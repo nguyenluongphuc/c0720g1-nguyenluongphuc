@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //làm không đúng hoàn toàn theo theo nội dung đề bài
+    //nhưng vẫn đạt được yêu cầu đề bài
+
+    class ElectricLamp {
+        constructor() {
+            this.status = "off";
+            this.battery = 100;
+        }
+        getStatus() {
+            return this.status;
+        }
+        setStatus(status) {
+            this.status = status;
+        }
+        getBattery() {
+            return this.battery;
+        }
+    }
+
+    class SwitchButton {
+        constructor() {
+            this.status = "off";
+        }
+        getStatus() {
+            return this.status;
+        }
+        switchOn(lamp) {
+            lamp.battery -= 10;
+            lamp.status = "on";
+            this.status = "on";
+        }
+        switchOff(lamp) {
+            lamp.status = "off";
+            this.status = "off";
+        }
+    }
+
+    let switchButt = new SwitchButton();
+    let lamp = new ElectricLamp();
+
+
+    console.log(lamp.getStatus());
+    console.log(lamp.getBattery());
+
+    for (let i = 0 ; i < 10 ; i++) {
+        switchButt.switchOn(lamp);
+        console.log(lamp.getStatus());
+        switchButt.switchOff(lamp);
+        console.log(lamp.getStatus());
+        console.log(lamp.getBattery());
+    }
+</script>
+</body>
+</html>

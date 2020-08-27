@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+        getWeight() {
+            return this.weight;
+        }
+        isEmpty() {
+            if ( this.weight > 0 ) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        decrease() {
+            this.weight--;
+        }
+    }
+
+    class Human {
+        constructor(name,gender,weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+        getName() {
+            return this.name;
+        }
+        setName(name) {
+            this.name = name;
+        }
+        isMale() {
+            if ( this.gender === "male") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        setGender(gender) {
+            this.gender = gender;
+        }
+        getWeight() {
+            return this.weight;
+        }
+        setWeight(weight) {
+            this.weight = weight;
+        }
+        say(string) {
+            console.log(string);
+        }
+        checkApple(apple) {
+            return apple.weight;
+        }
+        eat(apple) {
+            apple.weight--;
+            this.weight++;
+        }
+    }
+
+    let apple = new Apple(10);
+    let adam = new Human("Adam" , "male" , 60);
+    let eva = new Human("Eva" , "female" , 45);
+
+    adam.say("Hello, my name " + adam.getName()
+            + ". I'm " + adam.gender
+            + " and my weight " + adam.getWeight());
+    eva.say("Hi, my name " + eva.getName()
+            + ". I'm " + eva.gender
+            + " and my weight " + eva.getWeight());
+    adam.say("I have an apple. It's weight is " + adam.checkApple(apple)
+            + ". Do you want to eat it ?");
+    eva.say("Yes");
+    eva.eat(apple);
+    eva.say("Good apple. Let's see, my weight now is " + eva.getWeight());
+    adam.eat(apple);
+    adam.say("Yeah! It's good ! I ate. My weight now is " + adam.getWeight());
+    adam.say("And apple's weight now is " + apple.getWeight());
+
+
+</script>
+</body>
+</html>
