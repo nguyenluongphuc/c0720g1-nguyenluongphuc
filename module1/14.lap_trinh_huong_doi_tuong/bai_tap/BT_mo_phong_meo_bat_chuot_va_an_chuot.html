@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Animal{
+        constructor(name,weight,speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+        }
+    }
+    class Rat extends Animal{
+        constructor(name,weight,speed,status) {
+            super (name,weight,speed);
+            this.status = status;
+        }
+        soundOfRat() {
+            console.log("Chit ! Chit ! I'm " + this.name);
+        }
+    }
+    class Cat extends Animal{
+        constructor(name,weight,speed) {
+            super (name,weight,speed);
+        }
+        soundOfCat() {
+            console.log("Meow ! Meow ! I'm " + this.name);
+        }
+        catchRat(rat) {
+            if ( this.speed > rat.speed ) {
+                console.log( rat.name + " is catched !");
+                return true;
+            } else {
+                console.log( rat.name + " run away !" + this.name + " too slow !");
+                return false;
+            }
+        }
+        eatRat(rat) {
+            if ( rat.status == "alive") {
+                this.weight += rat.weight;
+            } else {
+                console.log("No! No! " + rat.name + " is " + rat.status
+                            + ". " + this.name + " never eat " + rat.status + " " + rat.name);
+            }
+        }
+    }
+
+    let rat1 = new Rat("Louis",12,100,"alive");
+    let rat2 = new Rat("Bob",15,0,"died");
+    let rat3 = new Rat("Flash",11,200,"alive");
+
+    let cat = new Cat("Oggy",25,150);
+
+    cat.soundOfCat();
+    rat1.soundOfRat();
+    if(cat.catchRat(rat1)) {
+        cat.eatRat(rat1);
+        console.log( "Weight of " + cat.name + " after eat " + rat1.name + " is " + cat.weight);
+    }
+
+    cat.soundOfCat();
+    rat2.soundOfRat();
+    if(cat.catchRat(rat2)) {
+        cat.eatRat(rat2);
+        console.log( "Weight of " + cat.name + " after eat " + rat2.name + " is " + cat.weight);
+    }
+
+    cat.soundOfCat();
+    rat3.soundOfRat();
+    if(cat.catchRat(rat3)) {
+        cat.eatRat(rat3);
+        console.log( "Weight of " + cat.name + " after eat " + rat3.name + " is " + cat.weight);
+    }
+
+</script>
+
+</body>
+</html>
