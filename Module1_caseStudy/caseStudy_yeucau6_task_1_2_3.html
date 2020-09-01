@@ -102,8 +102,157 @@
         }
     }
 
+    class Employee {
+        constructor(name,idNumber,dateOfBirth,email,address,position) {
+            this.name = name;
+            this.idNumber = idNumber;
+            this.dateOfBirth = dateOfBirth;
+            this.email = email;
+            this.address = address;
+            this.position = position;
+        }
+        getName() {
+            return this.name;
+        }
+        setName(name) {
+            this.name = name;
+        }
+        getIDNumber() {
+            return this.idNumber;
+        }
+        setIDNumber(idNumber) {
+            this.idNumber = idNumber;
+        }
+        getDateOfBirth() {
+            return this.dateOfBirth;
+        }
+        setDateOfBirth(dateOfBirth) {
+            this.dateOfBirth = dateOfBirth;
+        }
+        getEmail() {
+            return this.email;
+        }
+        setEmail(email) {
+            this.email = email;
+        }
+        getAddress() {
+            return this.address;
+        }
+        setAddress(address) {
+            this.address = address;
+        }
+        getPosition() {
+            return this.position;
+        }
+        setPosition(position) {
+            this.position = position;
+        }
+        getSalary() {
+            if ( this.position == "Manager" || this.position == "manager" ) {
+                return 500 + "USD";
+            } else if ( this.position == "Sale" || this.position == "sale" ) {
+                return 300 + "USD";
+            } else if ( this.position == "Marketing" || this.position == "marketing" ) {
+                return 200 + "USD";
+            } else {
+                return "Something wrong with this employee's position";
+            }
+        }
+    }
+
     let listCustomers = [];
+    let arrEmployees = [];
     displayMainMenu();
+
+    function addNewEmployee() {
+        let name = prompt("Enter employee's name");
+        let idNumber = prompt("Enter employee's ID number");
+        let dateOfBirth = prompt("Enter employee's date of birth","dd/mm/yyyy");
+        let email = prompt("Enter employee's e-mail","abc@abc.abc");
+        let address = prompt("Enter employee's address");
+        let position = prompt("Enter employee's job position","Manager or Sale or Marketing");
+        let addEmployee = new Employee(name,idNumber,dateOfBirth,email,address,position);
+        arrEmployees.push(addEmployee);
+        alert("Add new employee, Done !");
+        displayMainMenu();
+    }
+    function displayEmployeeInfor() {
+        let employeeList = "";
+        for ( let i = 0 ; i < arrEmployees.length ; i++ ) {
+            employeeList += (i+1) + ". " +  arrEmployees[i].getName() + " - " + arrEmployees[i].getDateOfBirth() + "\n";
+        }
+        let choose = prompt("Enter number of employee you want to show \n" + employeeList);
+        alert("Information of " + arrEmployees[choose-1].getName() + " :\n"
+            + "Name : " + arrEmployees[choose-1].getName() + "\n"
+            + "ID numbers : " + arrEmployees[choose-1].getIDNumber() + "\n"
+            + "Date of birth : " + arrEmployees[choose-1].getDateOfBirth() + "\n"
+            + "Email : " + arrEmployees[choose-1].getEmail() + "\n"
+            + "Address : " + arrEmployees[choose-1].getAddress() + "\n"
+            + "Job position : " + arrEmployees[choose-1].getPosition() + "\n"
+            + "Salary : " + arrEmployees[choose-1].getSalary() + "\n");
+        displayMainMenu();
+    }
+    function editEmployeeInfor() {
+        let employeeList = "";
+        for ( let i = 0 ; i < arrEmployees.length ; i++ ) {
+            employeeList += (i+1) + ". " +  arrEmployees[i].getName() + " - " + arrEmployees[i].getDateOfBirth() + "\n";
+        }
+        let choose = prompt("Enter number of employee you want to edit information \n" + employeeList);
+        let chooseDetail = parseInt(prompt("Enter number of detail you want to edit \n"
+                                + "1. Name : " + arrEmployees[choose-1].getName() + "\n"
+                                + "2. ID numbers : " + arrEmployees[choose-1].getIDNumber() + "\n"
+                                + "3. Date of birth : " + arrEmployees[choose-1].getDateOfBirth() + "\n"
+                                + "4. Email : " + arrEmployees[choose-1].getEmail() + "\n"
+                                + "5. Address : " + arrEmployees[choose-1].getAddress() + "\n"
+                                + "6. Job position : " + arrEmployees[choose-1].getPosition() + "\n"));
+        switch (chooseDetail) {
+            case 1:
+                let newOne = prompt("Enter new employee's name");
+                arrEmployees[choose-1].setName(newOne);
+                alert("Done !");
+                break;
+            case 2:
+                arrEmployees[choose-1].setIDNumber(prompt("Enter new employee's ID number"));
+                alert("Done !");
+                break;
+            case 3:
+                arrEmployees[choose-1].setDateOfBirth(prompt("Enter new employee's name"));
+                alert("Done !");
+                break;
+            case 4:
+                arrEmployees[choose-1].setEmail(prompt("Enter new employee's name"));
+                alert("Done !");
+                break;
+            case 5:
+                arrEmployees[choose-1].setAddress(prompt("Enter new employee's name"));
+                alert("Done !");
+                break;
+            case 6:
+                arrEmployees[choose-1].setPosition(prompt("Enter new employee's name"));
+                alert("Done !");
+                break;
+        }
+        displayMainMenu();
+    }
+    function deleteEmployee() {
+        let employeeList = "";
+        for ( let i = 0 ; i < arrEmployees.length ; i++ ) {
+            employeeList += (i+1) + ". " +  arrEmployees[i].getName() + " - " + arrEmployees[i].getDateOfBirth() + "\n";
+        }
+        let choose = prompt("Enter number of employee you want to delete \n" + employeeList);
+        if ( choose == "" || choose == null ) {
+            alert("So, don't want to delete anybody ?");
+        } else {
+            let confirmDelete = confirm("Are you sure ?");
+            if ( confirmDelete ) {
+                arrEmployees.splice(choose-1,1);
+                alert("Done !");
+            } else {
+                alert("So, don't want to delete anymore ?");
+            }
+        }
+        displayMainMenu();
+    }
 
     function addNewCustomer() {
         let name;
@@ -390,7 +539,11 @@
             + "3. Display total pay of customer. \n"
             + "4. Edit Customer's Information . \n"
             + "5. Delete Customer.\n"
-            + "6. Exit."));
+            + "6. Add New Employee. \n"
+            + "7. Display Employee's Information. \n"
+            + "8. Edit Employee's Information . \n"
+            + "9. Delete Employee.\n"
+            + "10. Exit."));
         switch (mainMenu) {
             case 1:
                 addNewCustomer();
@@ -408,6 +561,18 @@
                 deleteCustomer();
                 break;
             case 6:
+                addNewEmployee();
+                break;
+            case 7:
+                displayEmployeeInfor();
+                break;
+            case 8:
+                editEmployeeInfor();
+                break;
+            case 9:
+                deleteEmployee();
+                break;
+            case 10:
                 break;
         }
 
